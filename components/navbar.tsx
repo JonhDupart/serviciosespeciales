@@ -1,3 +1,4 @@
+import { Link } from '@nextui-org/link';
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -6,136 +7,138 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-} from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
-import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
+} from '@nextui-org/navbar';
+import clsx from 'clsx';
+import NextLink from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { Logo } from '@/components/icons';
+import { ThemeSwitch } from '@/components/theme-switch';
+
+import { siteConfig } from '@/config/site';
+
+import useScrollDirection from './useScrollDirection';
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
+  const scrollDirection = useScrollDirection();
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      setScrollY(currentScrollY);
+
+      if (currentScrollY > 600) {
+        if (scrollDirection === 'down') {
+          setIsVisible(false);
+        } else if (scrollDirection === 'up') {
+          setIsVisible(true);
+        }
+      } else {
+        setIsVisible(true); // Always show the Navbar if scroll position is less than 600px
       }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
+    };
+
+    // Inicializar scroll al cargar la página
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollDirection, scrollY]);
+
+  const navbarClasses = clsx(
+    'fixed top-0 left-0 w-full transition-transform transition-opacity duration-300 ease-in-out transition-delay: 0.5s p-4',
+    {
+      'transform translate-y-[-10%] opacity-0': !isVisible,
+      'transform translate-y-0 opacity-100': isVisible,
+    }
   );
 
+  const iconStyle = { fontSize: '24px' };
+
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+    <NextUINavbar maxWidth="xl" position="sticky" className={navbarClasses}>
+      <NavbarContent className="shouldHideOnScroll flex justify-between items-center">
+        {/* Logo on the left */}
+        <NavbarBrand className="flex gap-3">
+          <NextLink className="flex items-center gap-1" href="/">
             <Logo />
             <p className="font-bold text-inherit">ACME</p>
           </NextLink>
         </NavbarBrand>
-        <div className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </div>
-      </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link>
+        {/* Navigation links and menu aligned to the right (for larger screens) */}
+        <div className="hidden lg:flex items-center gap-4 ml-auto">
+          {/* Navigation links */}
+          <div className="flex gap-4">
+            {siteConfig.navItems.map((item) => (
+              <NavbarItem key={item.href}>
+                <NextLink
+                  className={clsx(
+                    'text-foreground',
+                    'data-[active=true]:text-primary data-[active=true]:font-medium'
+                  )}
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              </NavbarItem>
+            ))}
+          </div>
+
+          {/* Icons and ThemeSwitch */}
+          <NavbarItem className="flex gap-2">
+            <Link isExternal href={siteConfig.links.whatsapp}>
+              <FaWhatsapp style={iconStyle} className="text-default-500" />
+            </Link>
+            <Link isExternal href={siteConfig.links.facebook}>
+              <FaFacebook style={iconStyle} className="text-default-500" />
+            </Link>
+            <Link isExternal href={siteConfig.links.instagram}>
+              <FaInstagram style={iconStyle} className="text-default-500" />
+            </Link>
+            <ThemeSwitch />
+          </NavbarItem>
+
+          {/* NavbarMenu aligned to the right */}
+          <NavbarItem>
+            <NavbarMenu>
+              <div className="mx-4 mt-2 flex flex-col gap-2">
+                {siteConfig.navMenuItems.map((item, index) => (
+                  <NavbarMenuItem key={`${item}-${index}`}>
+                    <Link
+                      color={
+                        index === 2
+                          ? 'primary'
+                          : index === siteConfig.navMenuItems.length - 1
+                            ? 'danger'
+                            : 'foreground'
+                      }
+                      href="#"
+                      size="lg"
+                    >
+                      {item.label}
+                    </Link>
+                  </NavbarMenuItem>
+                ))}
+              </div>
+            </NavbarMenu>
+          </NavbarItem>
+        </div>
+
+        {/* Mobile view */}
+        <div className="flex items-center gap-4 sm:hidden">
           <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Sponsor
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarMenu>
-        {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+          <NavbarMenuToggle />
         </div>
-      </NavbarMenu>
+      </NavbarContent>
     </NextUINavbar>
   );
 };

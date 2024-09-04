@@ -1,0 +1,123 @@
+// data/slides.js
+export const slides = [
+  {
+    id: 1,
+    title: 'Slide 1',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 2,
+    title: 'Slide 2',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 3,
+    title: 'Slide 3',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 4,
+    title: 'Slide 4',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 5,
+    title: 'Slide 5',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 6,
+    title: 'Slide 6',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 7,
+    title: 'Slide 7',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 8,
+    title: 'Slide 8',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 9,
+    title: 'Slide 9',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 10,
+    title: 'Slide 10',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 11,
+    title: 'Slide 11',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 12,
+    title: 'Slide 12',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 13,
+    title: 'Slide 13',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 14,
+    title: 'Slide 14',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 15,
+    title: 'Slide 15',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 16,
+    title: 'Slide 16',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 17,
+    title: 'Slide 17',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 18,
+    title: 'Slide 18',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 19,
+    title: 'Slide 19',
+    description: 'Available soon.',
+    image: '/pintura.jpeg',
+  },
+  {
+    id: 20,
+    title: 'Slide 20',
+    description: 'Coming soon.',
+    image: '/pintura.jpeg',
+  },
+];

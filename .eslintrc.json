@@ -1,23 +1,33 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc.json",
   "env": {
-    "browser": false,
+    "browser": true,
     "es2021": true,
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
+    "next",
+    "next/core-web-vitals",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "prettier"
   ],
-  "plugins": ["react", "unused-imports", "import", "@typescript-eslint", "jsx-a11y", "prettier"],
+  "plugins": [
+    "react",
+    "unused-imports",
+    "import",
+    "@typescript-eslint",
+    "jsx-a11y",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 2021,
     "sourceType": "module"
   },
   "settings": {
@@ -28,17 +38,16 @@
   "rules": {
     "no-console": "warn",
     "react/prop-types": "off",
-    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "off",
-    "jsx-a11y/click-events-have-key-events": "warn",
-    "jsx-a11y/interactive-supports-focus": "warn",
-    "prettier/prettier": "warn",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "prettier/prettier": "off",
     "no-unused-vars": "off",
     "unused-imports/no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-imports": "off",
     "@typescript-eslint/no-unused-vars": [
-      "warn",
+      "off",
       {
         "args": "after-used",
         "ignoreRestSiblings": false,
@@ -49,39 +58,34 @@
       "warn",
       {
         "groups": [
-          "type",
           "builtin",
-          "object",
           "external",
           "internal",
-          "parent",
           "sibling",
+          "parent",
           "index"
         ],
+        "newlines-between": "always",
         "pathGroups": [
           {
-            "pattern": "~/**",
-            "group": "external",
-            "position": "after"
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "before"
           }
         ],
-        "newlines-between": "always"
+        "pathGroupsExcludedImportTypes": ["react"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
       }
     ],
     "react/self-closing-comp": "warn",
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        "callbacksLast": true,
-        "shorthandFirst": true,
-        "noSortAlphabetically": false,
-        "reservedFirst": true
-      }
-    ],
+    "react/jsx-sort-props": "off",
     "padding-line-between-statements": [
       "warn",
-      {"blankLine": "always", "prev": "*", "next": "return"},
-      {"blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
       {
         "blankLine": "any",
         "prev": ["const", "let", "var"],

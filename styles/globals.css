@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* styles/globals.css */
+/* styles/globals.css */
+
+.masonry-grid_column {
+  /* You can adjust this value to control the spacing between columns */
+  padding: 0 4px;
+}
+
+.masonry-grid_column > div {
+  /* You can adjust this value to control the spacing between items */
+  margin-bottom: 16px;
+}

@@ -1,13 +1,14 @@
-import type { AppProps } from "next/app";
+import { NextUIProvider } from '@nextui-org/system';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
-import { NextUIProvider } from "@nextui-org/system";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { useRouter } from "next/router";
+import { fontSans, fontMono } from '@/config/fonts';
 
-import { fontSans, fontMono } from "@/config/fonts";
-import "@/styles/globals.css";
+import '../node_modules/swiper/swiper.min.css'; // Importa los estilos de Swiper
+import '../styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
@@ -18,6 +19,8 @@ export default function App({ Component, pageProps }: AppProps) {
     </NextUIProvider>
   );
 }
+
+export default App;
 
 export const fonts = {
   sans: fontSans.style.fontFamily,

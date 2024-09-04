@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/theme'
+import { nextui } from '@nextui-org/theme';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,11 +11,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        sans: ['var(--font-sans)'],
+        mono: ['var(--font-mono)'],
+      },
+      colors: {
+        'custom-yellow': '#fde047', // Define el color con un nombre personalizado
       },
     },
   },
-  darkMode: "class",
+  darkMode: 'class',
   plugins: [nextui()],
-}
+};
