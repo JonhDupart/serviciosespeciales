@@ -11,16 +11,16 @@ export const siteConfig = {
     },
     {
       label: 'Servicios',
-      href: '/docs',
+      href: '/servicios',
     },
     {
       label: 'Precio',
-      href: '/pricing',
+      href: '/precios',
     },
 
     {
       label: 'Nosotros',
-      href: '/about',
+      href: '/nosotros',
     },
   ],
   navMenuItems: [
