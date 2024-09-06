@@ -45,8 +45,8 @@ export default function IndexPage() {
               transition={{ duration: 0.7 }}
               className="w-full text-4xl  leading-tight mb-2 mt-4 font-bold gradient-text"
             >
-Servicios Especiales
-para su Hogar 
+            Servicios Especiales
+            ' para su Hogar 
             </motion.h1>
             <motion.h4
               initial={{ opacity: 0, y: 50 }}

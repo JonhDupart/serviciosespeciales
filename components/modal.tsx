@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { FaViber, FaHandsHelping, FaUsersCog } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
-import '../styles/globals.css';
 
 
 export default function App() {
