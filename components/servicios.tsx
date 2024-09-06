@@ -59,11 +59,11 @@ const ServiciosSearch: React.FC = () => {
   };
 
   return (
-    <div className="w-full block md:w-1/2 flex flex-col items-center justify-center mt-8">
+    <div className="w-full md:w-1/2 flex flex-col items-center justify-center mt-2 mb-10">
       <Input
         aria-label="Buscar servicios"
         placeholder="Busca tu servicio..."
-        startContent={<Kbd keys={['command']}>K</Kbd>}
+        startContent={<Kbd keys={['command']}>S</Kbd>}
         onChange={handleSearchChange}
         className="mb-4 w-full max-w-4xl" // Ajusta el ancho aquí
         size="lg" // Aumenta el tamaño del Input
@@ -74,7 +74,7 @@ const ServiciosSearch: React.FC = () => {
             <li key={servicio.id} className="mb-2">
               <Link
                 href={servicio.url}
-                className="text-gray-900 hover:underline"
+                className="text-base hover:underline font-semibold"
               >
                 <strong>{servicio.name}:</strong> {servicio.description}
               </Link>

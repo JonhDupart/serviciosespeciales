@@ -104,7 +104,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 2,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -116,7 +116,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 3,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -128,7 +128,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 4,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -140,7 +140,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 5,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -152,7 +152,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 6,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -164,7 +164,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 7,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -176,7 +176,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 8,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -188,7 +188,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 9,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -200,7 +200,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 10,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -212,7 +212,7 @@ const items: ImageItem[] = [
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
   {
-    id: 1,
+    id: 11,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,
@@ -223,7 +223,7 @@ const items: ImageItem[] = [
     description:
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },  {
-    id: 1,
+    id: 12,
     src: "/estructura.jpeg",
     alt: "Imagen del producto",
     likes: 1,

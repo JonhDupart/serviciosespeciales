@@ -20,7 +20,7 @@ export const siteConfig = {
 
     {
       label: 'Nosotros',
-      href: '/nosotros',
+      href: '/nosotro',
     },
   ],
   navMenuItems: [

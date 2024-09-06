@@ -32,7 +32,7 @@ export const Navbar = () => {
 
       setScrollY(currentScrollY);
 
-      if (currentScrollY > 600) {
+      if (currentScrollY > 666) {
         if (scrollDirection === 'down') {
           setIsVisible(false);
         } else if (scrollDirection === 'up') {
@@ -54,7 +54,7 @@ export const Navbar = () => {
   }, [scrollDirection, scrollY]);
 
   const navbarClasses = clsx(
-    'fixed top-0 left-0 w-full transition-transform transition-opacity duration-300 ease-in-out transition-delay: 0.5s p-4',
+    'fixed top-0 left-0 w-full transition-transform transition-opacity duration-300 ease-in-out p-4',
     {
       'transform translate-y-[-10%] opacity-0': !isVisible,
       'transform translate-y-0 opacity-100': isVisible,
@@ -70,12 +70,12 @@ export const Navbar = () => {
         <NavbarBrand className="flex gap-3">
           <NextLink className="flex items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold text-inherit">S E P S C</p>
           </NextLink>
         </NavbarBrand>
 
         {/* Navigation links and menu aligned to the right (for larger screens) */}
-        <div className="hidden lg:flex items-center gap-4 ml-auto">
+        <div className="hidden md:flex items-center gap-4 ml-auto">
           {/* Navigation links */}
           <div className="flex gap-4">
             {siteConfig.navItems.map((item) => (
@@ -110,7 +110,7 @@ export const Navbar = () => {
           {/* NavbarMenu aligned to the right */}
           <NavbarItem>
             <NavbarMenu>
-              <div className="mx-4 mt-2 flex flex-col gap-2">
+              <div className="mx-4 mt-20 flex flex-col gap-2">
                 {siteConfig.navMenuItems.map((item, index) => (
                   <NavbarMenuItem key={`${item}-${index}`}>
                     <Link
@@ -134,9 +134,14 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile view */}
-        <div className="flex items-center gap-4 sm:hidden">
+        <div className="flex items-center gap-4 md:hidden">
           <ThemeSwitch />
-          <NavbarMenuToggle />
+          <div className="relative">
+            {/* A wrapper to increase click area */}
+            <div className="flex items-center justify-center w-12 h-12 rounded-full cursor-pointer bg-transparent">
+              <NavbarMenuToggle className="text-3xl" />
+            </div>
+          </div>
         </div>
       </NavbarContent>
     </NextUINavbar>

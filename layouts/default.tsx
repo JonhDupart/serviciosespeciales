@@ -22,7 +22,7 @@ export default function DefaultLayout({
           isExternal
           className="flex items-center gap-1 text-current"
           href="https://zipaquiradigital.com"
-          title="nextui.org homepage"
+          title="zipaquiradigitital.com"
         >
           <span className="text-default-600">Diseño y Desarrollo </span>
           <p className="text-primary">Zipaquirá Digital</p>

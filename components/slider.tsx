@@ -22,15 +22,7 @@ const Slider = () => {
 
   return (
     <div className="relative w-full overflow-hidden py-0">
-      <motion.h2
-        ref={headerRef}
-        initial={{ opacity: 0, y: 50 }} // Animación inicial
-        animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 190 }} // Animación al entrar/salir del viewport
-        transition={{ duration: 0.9 }} // Duración de la animación
-        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl leading-tight font-bold pt-20  pb-4  lg:pt-20 xl:pt-32 md:pt-16 lg:pb-14 xl:pb-10 flex items-center"
-      >
-        Servicios
-      </motion.h2>
+
 
       <motion.div
         ref={sliderRef}
@@ -45,7 +37,7 @@ const Slider = () => {
           loop={true} // Hacer el slider infinito
           autoplay={{ delay: 2000 }} // Intervalo de auto-play
           pagination={{ clickable: true }} // Hacer la paginación clickeable
-          modules={[Autoplay, Pagination]} // Módulos de Swiper que estamos usando
+          modules={[Autoplay]} // Módulos de Swiper que estamos usando
           speed={1500}
           breakpoints={{
             // Definir el número de slides visibles a diferentes tamaños de pantalla
@@ -82,12 +74,12 @@ const Slider = () => {
                     height={600} // Ajusta el tamaño según lo necesites
                     layout="responsive" // Ajusta el layout según lo necesites
                   />
-                  <CardFooter className="absolute bottom-0 flex justify-between items-center p-2 bg-white/20 backdrop-blur-sm border border-white/20 rounded-lg">
-                    <p className="text-tiny text-gray/900">
+                  <CardFooter className="absolute bottom-0 flex justify-between items-center p-2 bg-yellow-500 backdrop-blur-sm border border-white/20 rounded-lg">
+                    <p className="text-sm text-gray/900 font-bold">
                       {slide.description}
                     </p>
                     <Button
-                      className="text-tiny text-white bg-black/20"
+                      className="text-tiny text-white dark:text-gray-500 bg-success/70"
                       variant="flat"
                       color="default"
                       radius="lg"
