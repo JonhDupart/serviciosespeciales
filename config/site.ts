@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Servicios Especiales Para su Casa',
   description:
-    'Mantenimiento, reparación y construción para todo tipo de espacios, desde colgar la base del televisor hasta una remodelación completa de tu hogar.',
+    'Mantenimiento, reparación y construcción para todo tipo de espacios, desde colgar la base del televisor hasta una remodelación completa de tu hogar.',
   navItems: [
     {
       label: 'Inicio',
@@ -17,48 +17,35 @@ export const siteConfig = {
       label: 'Precio',
       href: '/precios',
     },
-
     {
       label: 'Nosotros',
-      href: '/nosotro',
+      href: '/nosotros', // Corregido 'nosotro' a 'nosotros'
     },
   ],
   navMenuItems: [
     {
-      label: 'Profile',
-      href: '/profile',
+      label: 'Servicios',
+      href: '/servicios',
     },
     {
-      label: 'Dashboard',
-      href: '/dashboard',
+      label: 'Precios',
+      href: '/precios',
     },
     {
-      label: 'Projects',
-      href: '/projects',
+      label: 'Trabajos',
+      href: '/trabajos',
     },
     {
-      label: 'Team',
-      href: '/team',
+      label: 'Nosotros',
+      href: '/nosotros', // Corregido 'nosotros' de nuevo
     },
     {
-      label: 'Calendar',
-      href: '/calendar',
-    },
-    {
-      label: 'Settings',
-      href: '/settings',
-    },
-    {
-      label: 'Help & Feedback',
-      href: '/help-feedback',
-    },
-    {
-      label: 'Logout',
-      href: '/logout',
+      label: 'Contáctanos',
+      href:'contactanos',
     },
   ],
   links: {
-    whatsapp: 'https://wa.me/1234567890',
+    whatsapp: 'https://wa.me/573015360531', // Corregido el número de teléfono
     facebook: 'https://facebook.com/yourpage',
     instagram: 'https://instagram.com/yourprofile',
   },

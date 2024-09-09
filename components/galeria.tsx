@@ -93,7 +93,7 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
 const items: ImageItem[] = [
   {
     id: 1,
-    src: "/estructura.jpeg",
+    src: "/estructuras.jpg",
     alt: "Imagen del producto",
     likes: 1,
     comments: 24,
@@ -101,11 +101,11 @@ const items: ImageItem[] = [
     saves: 3,
     title: "Construcción",
     description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
+      "Descripción de la construcci ",
   },
   {
     id: 2,
-    src: "/estructura.jpeg",
+    src: "/estructuras.jpg",
     alt: "Imagen del producto",
     likes: 1,
     comments: 24,
@@ -115,125 +115,7 @@ const items: ImageItem[] = [
     description:
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
-  {
-    id: 3,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 4,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 5,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 6,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 7,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 8,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 9,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 10,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
-  {
-    id: 11,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },  {
-    id: 12,
-    src: "/estructura.jpeg",
-    alt: "Imagen del producto",
-    likes: 1,
-    comments: 24,
-    shares: 3,
-    saves: 3,
-    title: "Construcción",
-    description:
-      "Descripción de la construcción esta es la descripcion de las imagenes ",
-  },
+  
   // Resto de las imágenes...
 ];
 

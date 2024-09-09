@@ -116,12 +116,14 @@ export const Navbar = () => {
                     <Link
                       color={
                         index === 2
-                          ? 'primary'
+                          ? 'warning'
                           : index === siteConfig.navMenuItems.length - 1
-                            ? 'danger'
+                            ? 'success'
                             : 'foreground'
                       }
-                      href="#"
+                      href={item.href} // Aquí es donde se utiliza el href del navMenuItems
+
+                     
                       size="lg"
                     >
                       {item.label}

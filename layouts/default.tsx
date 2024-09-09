@@ -23,9 +23,11 @@ export default function DefaultLayout({
           className="flex items-center gap-1 text-current"
           href="https://zipaquiradigital.com"
           title="zipaquiradigitital.com"
+          target='black'
+          rel='noreferrer'
         >
           <span className="text-default-600">Diseño y Desarrollo </span>
-          <p className="text-primary">Zipaquirá Digital</p>
+          <p className="text-yellow-500">Zipaquirá Digital</p>
         </Link>
       </footer>
     </div>

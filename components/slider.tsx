@@ -72,13 +72,16 @@ const Slider = () => {
                     alt={slide.title}
                     width={800} // Ajusta el tamaño según lo necesites
                     height={600} // Ajusta el tamaño según lo necesites
-                    layout="responsive" // Ajusta el layout según lo necesites
                   />
                   <CardFooter className="absolute bottom-0 flex justify-between items-center p-2 bg-yellow-500 backdrop-blur-sm border border-white/20 rounded-lg">
                     <p className="text-sm text-gray/900 font-bold">
                       {slide.description}
                     </p>
                     <Button
+                     as="a" 
+                     target='black'
+                     rel='noreferrer'
+                     href="https://api.whatsapp.com/send/?phone=573015360531&text=Hola%2C+me+gustar%C3%ADa+saber+m%C3%A1s+sobre+sus+servicios.&type=phone_number&app_absent=0"
                       className="text-tiny text-white dark:text-gray-500 bg-success/70"
                       variant="flat"
                       color="default"

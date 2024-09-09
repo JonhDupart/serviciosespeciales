@@ -29,9 +29,9 @@ export default function App() {
    
     <motion.h3
       ref={refHeader}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 40 }}
-      exit={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: headerInView ? 1 : 10, y: headerInView ? 0 : 20 }}
+      exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.7 }}
       className="w-full  text-2xl leading-tight mb-2 mt-4 font-semibold"
     >
@@ -39,9 +39,9 @@ export default function App() {
     </motion.h3>
     <motion.h4
       ref={refHeader}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 30 }}
-      exit={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: headerInView ? 1 : 10, y: headerInView ? 0 : 20 }}
+      exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.8 }}
       className="w-full text-base lg:text-lg leading-relaxed"
     >

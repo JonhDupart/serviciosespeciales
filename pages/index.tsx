@@ -46,7 +46,7 @@ export default function IndexPage() {
               className="w-full text-4xl  leading-tight mb-2 mt-4 font-bold gradient-text"
             >
             Servicios Especiales
-            para su Hogar 
+            Para Su Casa 
             </motion.h1>
             <motion.h4
               initial={{ opacity: 0, y: 50 }}
