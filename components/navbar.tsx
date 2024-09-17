@@ -54,7 +54,7 @@ export const Navbar = () => {
   }, [scrollDirection, scrollY]);
 
   const navbarClasses = clsx(
-    'fixed top-0 left-0 w-full transition-transform transition-opacity duration-300 ease-in-out p-4',
+    'fixed top-0 left-0 w-full transition-transform transition-opacity duration-300 ease-in-out p-2',
     {
       'transform translate-y-[-10%] opacity-0': !isVisible,
       'transform translate-y-0 opacity-100': isVisible,
@@ -136,7 +136,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile view */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center  md:hidden">
           <ThemeSwitch />
           <div className="relative">
             {/* A wrapper to increase click area */}

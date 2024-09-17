@@ -54,33 +54,8 @@
         "argsIgnorePattern": "^_.*?$"
       }
     ],
-    "import/order": [
-      "warn",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "sibling",
-          "parent",
-          "index"
-        ],
-        "newlines-between": "always",
-        "pathGroups": [
-          {
-            "pattern": "@/components/**",
-            "group": "internal",
-            "position": "before"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ],
-    "react/self-closing-comp": "warn",
+    "import/order": "off", // Desactiva la regla de orden de importaciones
+    "react/self-closing-comp": "off", // Desactiva la advertencia para componentes vacíos
     "react/jsx-sort-props": "off",
     "padding-line-between-statements": [
       "warn",

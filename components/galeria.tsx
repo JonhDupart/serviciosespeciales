@@ -11,6 +11,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Masonry from 'react-masonry-css';
+import TextRevealDemo from '@/components/ui/TextRevealDem'; 
 
 // Define los tipos de las imágenes
 interface ImageItem {
@@ -115,6 +116,78 @@ const items: ImageItem[] = [
     description:
       "Descripción de la construcción esta es la descripcion de las imagenes ",
   },
+  {
+    id: 3,
+    src: "/estructuras.jpg",
+    alt: "Imagen del producto",
+    likes: 1,
+    comments: 24,
+    shares: 3,
+    saves: 3,
+    title: "Construcción",
+    description:
+      "Descripción de la construcci ",
+  },
+  {
+    id: 4,
+    src: "/estructuras.jpg",
+    alt: "Imagen del producto",
+    likes: 1,
+    comments: 24,
+    shares: 3,
+    saves: 3,
+    title: "Construcción",
+    description:
+      "Descripción de la construcción esta es la descripcion de las imagenes ",
+  },
+  {
+    id: 5,
+    src: "/estructuras.jpg",
+    alt: "Imagen del producto",
+    likes: 1,
+    comments: 24,
+    shares: 3,
+    saves: 3,
+    title: "Construcción",
+    description:
+      "Descripción de la construcci ",
+  },
+  {
+    id: 6,
+    src: "/estructuras.jpg",
+    alt: "Imagen del producto",
+    likes: 1,
+    comments: 24,
+    shares: 3,
+    saves: 3,
+    title: "Construcción",
+    description:
+      "Descripción de la construcción esta es la descripcion de las imagenes ",
+  },
+  {
+    id: 7,
+    src: "/estructuras.jpg",
+    alt: "Imagen del producto",
+    likes: 1,
+    comments: 24,
+    shares: 3,
+    saves: 3,
+    title: "Construcción",
+    description:
+      "Descripción de la construcci ",
+  },
+  {
+    id: 8,
+    src: "/estructuras.jpg",
+    alt: "Imagen del producto",
+    likes: 1,
+    comments: 24,
+    shares: 3,
+    saves: 3,
+    title: "Construcción",
+    description:
+      "Descripción de la construcción esta es la descripcion de las imagenes ",
+  },
   
   // Resto de las imágenes...
 ];
@@ -170,15 +243,9 @@ const Galeria: React.FC = () => {
     selectedImageIndex !== null ? items[selectedImageIndex] : null;
 
   return (
-    <div className="w-full flex min-h-screen flex-wrap content-center justify-center bg-transparent pt-24 sm:pt-14 md:pt-32 lg:pt-44 xl:pt-44">
+    <div className="w-full flex  flex-wrap content-center justify-center bg-transparent p-0">
       {/* Animated Header */}
-      <animated.h2
-        ref={refHeader}
-        style={headerSpring}
-        className="w-full text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl leading-tight font-bold flex items-start pb-4 md:pb-10 lg:pb-14 xl:pb-20"
-      >
-        Trabajos
-      </animated.h2>
+      <TextRevealDemo />
 
       {/* Animated Gallery */}
       <div className="w-full rounded-xl">
@@ -233,12 +300,12 @@ const Galeria: React.FC = () => {
               <ModalBody className="relative">
                 {selectedImage && (
                   <Image
-                    src={selectedImage.src}
-                    alt="Imagen grande"
-                    layout="responsive"
-                    width={800} // Puedes ajustar estos valores según el diseño
-                    height={600}
-                    className="object-contain rounded-lg"
+                  src={selectedImage.src}
+                  alt={selectedImage.alt} // Cambiar el alt a algo más descriptivo
+                  width={1000} // Ajusta según el tamaño que desees para el modal
+                  height={600}
+                  layout="responsive"
+                  className="object-contain rounded-lg"
                   />
                 )}
                 <button

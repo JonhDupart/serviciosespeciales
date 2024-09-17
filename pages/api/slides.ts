@@ -9,8 +9,8 @@ export const slides = [
  
   {
     id: 2,
-    title: 'Estructura metalica',
-    description: 'Estructura metalica',
+    title: 'Estructura metallica',
+    description: 'Estructura metallica',
     image: '/estructuras.jpg',
   },
   {
@@ -57,7 +57,7 @@ export const slides = [
   },
   {
     id: 10,
-    title: 'Impermeabilizacion de Techos',
+    title: 'Impermeabilización de Techos',
     description: 'Impermeabilizacion de Techos',
     image: '/impermeabilizacion.jpg',
   },

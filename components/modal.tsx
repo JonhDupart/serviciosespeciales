@@ -69,16 +69,16 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] w-full"
         >
-          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
-            <div className="flex justify-center items-center p-3 rounded-full bg-warning-100/80 text-yellow-500 w-12 h-12">
+          <div className="flex  z-10 w-full justify-start pl-4 pt-4 items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 ">
+          <div className="flex justify-center items-center  rounded-full bg-warning-100/80 text-yellow-500 w-12 h-12">
               <FaViber className="text-3xl" />
             </div>
             <p className="text-base font-semibold ml-3">Atención 24/7</p>
           </div>
-          <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased pb-10">
+          <div className="relative flex w-full p-4 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-justify overflow-y-auto subpixel-antialiased pb-5">
             <p className="font-normal text-base text-default-500">
-              Our service ensures continuous support for all your needs at any
-              time of day or night.
+            Estamos disponibles en cualquier momento para atender tus necesidades 
+            urgentes o programadas.
             </p>
           </div>
         </motion.div>
@@ -90,18 +90,17 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] w-full"
         >
-          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-4 pb-0">
-            <div className="flex justify-center items-center p-3 rounded-full bg-warning-100/80 text-yellow-500 w-12 h-12">
+          <div className="flex  z-10 w-full justify-start pl-4 pt-4 items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 ">
+          <div className="flex justify-center items-center p-3 rounded-full bg-warning-100/80 text-yellow-500 w-12 h-12">
               <FaUsersCog className="text-3xl" />
             </div>
             <p className="text-base font-semibold ml-4">
               Profesionales Calificados
             </p>
           </div>
-          <div className="relative flex w-full p-2 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+          <div className="relative flex w-full p-4 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-justify overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-base text-default-500">
-              Our team consists of highly trained professionals dedicated to
-              providing top-notch service.
+            Nuestro equipo de expertos en mantenimiento cuenta con formación especializada y certificaciones, Cumpliendo con los más altos estandares de calidad.
             </p>
           </div>
         </motion.div>
@@ -113,18 +112,18 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] w-full"
         >
-          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-4 pb-0">
-            <div className="flex justify-center items-center p-3 rounded-full bg-warning-100/80 text-yellow-500 w-12 h-12">
+          <div className="flex  z-10 w-full justify-start pl-4 pt-4 items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 ">
+          <div className="flex justify-center items-center p-3 rounded-full bg-warning-100/80 text-yellow-500 w-12 h-12">
               <FaHandsHelping className="text-3xl" />
             </div>
             <p className="text-base font-semibold text-center">
               Insumos de la Mejor Calidad
             </p>
           </div>
-          <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+          <div className="relative flex w-full p-4 flex-auto flex-col text-justify place-content-inherit align-items-inherit  break-words  overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-base text-default-500">
-              We use top-quality materials and tools to ensure long-lasting and
-              satisfying results.
+            Utilizamos materiales y herramientas de la más alta calidad,
+             asegurando la durabilidad y excelencia.
             </p>
           </div>
         </motion.div>

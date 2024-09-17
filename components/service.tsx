@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <>
-   <div className="flex flex-col items-center justify-center  text-center mt-32 ">
+   <div className="flex flex-col items-center justify-center  text-center mt-10 ">
    
     <motion.h3
       ref={refHeader}
@@ -35,7 +35,7 @@ export default function App() {
       transition={{ duration: 0.7 }}
       className="w-full  gradient-text text-4xl leading-tight mb-2 mt-4 font-semibold"
     >
-Ubicacion    </motion.h3>
+Servicios    </motion.h3>
     <motion.h4
       ref={refHeader}
       initial={{ opacity: 0, y: 50 }}
@@ -45,8 +45,8 @@ Ubicacion    </motion.h3>
       className="w-full text-base lg:text-lg leading-relaxed "
     >
      <p className="w-full md:w-3/5 mx-auto pb-2 mb-4">
-     Cubrimos una amplia área geográfica para brindarte soluciones donde las necesites. Nos especializamos en atender areas locales de Zipaquirá y toda Sabana Centro.
-  <span className="font-bold shadow-md  "> </span>
+  Contamos con un equipo de profesionales altamente capacitados, estamos listos para atender todas tus necesidades. 
+  <span className="font-bold shadow-md  "> Utiliza nuestro buscador de servicios para encontrar rápidamente lo que necesitas.</span>
 </p>
     </motion.h4>
    

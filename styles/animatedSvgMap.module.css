@@ -1,0 +1,202 @@
+.positionBase {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  /*zipa*/
+  .position-1 {
+    top: 35%;
+    left: 51%;
+  }
+  /*nemocon*/
+  .position-2 {
+    top: 23%;
+    left: 65%;
+  }
+  /*cogua*/
+  .position-3 {
+    top: 21%;
+    left: 55%;
+  }
+  /*gacha*/
+  .position-4 {
+    top: 36%;
+    left: 65%;
+  }
+  /*toca*/
+  .position-5 {
+    top: 47%;
+    left: 61%;
+  }
+  /*sopo*/
+  .position-6 {
+    top: 63%;
+    left: 57%;
+  }
+  /*chia*/
+  .position-7 {
+    top: 65%;
+    left: 48%;
+  }
+  /*tabio*/
+  .position-8 {
+    top: 46%;
+    left: 44%;
+  }
+  /*cajica*/
+  .position-9 {
+    top: 53%;
+    left: 49%;
+  }
+  /*tenjo*/
+  .position-10 {
+    top: 67%;
+    left: 37%;
+  }
+  /*cota*/
+  .position-11 {
+    top: 79%;
+    left: 39%;
+  }
+  
+  /* Media queries for mobile */
+  @media (max-width: 768px) {
+    .position-1 {
+      top: 35%;
+      left: 53%;
+    }
+    .position-2 {
+      top: 23%;
+      left: 62%;
+    }
+    .position-3 {
+      top: 24%;
+      left: 86%;
+    }
+    .position-4 {
+      top: 40%;
+      left: 85%;
+    }
+    .position-5 {
+      top: 47%;
+      left: 76%;
+    }
+    .position-6 {
+      top: 47%;
+      left: 38%;
+    }
+    .position-7 {
+      top: 53%;
+      left: 47%;
+    }
+    .position-8 {
+      top: 67%;
+      left: 20%;
+    }
+    .position-9 {
+      top: 62%;
+      left: 68%;
+    }
+    .position-10 {
+      top: 62%;
+      left: 43%;
+    }
+    .position-11 {
+      top: 77%;
+      left: 25%;
+    }
+  }
+  @media (max-width: 468px) {
+    .position-1 {
+      top: 35%;
+      left: 59%;
+    }
+    .position-2 {
+      top: 42%;
+      left: 53%;
+    }
+    .position-3 {
+      top: 36%;
+      left: 77%;
+    }
+    .position-4 {
+      top: 43%;
+      left: 77%;
+    }
+    .position-5 {
+      top: 47%;
+      left: 76%;
+    }
+    .position-6 {
+      top: 48%;
+      left: 40%;
+    }
+    .position-7 {
+      top: 51%;
+      left: 47%;
+    }
+    .position-8 {
+      top: 59%;
+      left: 27%;
+    }
+    .position-9 {
+      top: 56%;
+      left: 63%;
+    }
+    .position-10 {
+      top: 57%;
+      left:45%;
+    }
+    .position-11 {
+      top: 65%;
+      left: 27%;
+    }
+  }
+  
+  /* Media queries for tablets and small desktops */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .position-1 {
+      top: 34%;
+      left: 48%;
+    }
+    .position-2 {
+      top: 23%;
+      left: 67%;
+    }
+    .position-3 {
+      top: 21%;
+      left: 53%;
+    }
+    .position-4 {
+      top: 35%;
+      left: 68%;
+    }
+    .position-5 {
+      top: 46%;
+      left: 61%;
+    }
+    .position-6 {
+      top: 61%;
+      left: 56%;
+    }
+    .position-7 {
+      top: 63%;
+      left: 43%;
+    }
+    .position-8 {
+      top: 45%;
+      left: 38%;
+    }
+    .position-9 {
+      top: 51%;
+      left: 45%;
+    }
+    .position-10 {
+      top: 66%;
+      left: 28%;
+    }
+    .position-11 {
+      top: 77%;
+      left: 30%;
+    }
+  }
+  

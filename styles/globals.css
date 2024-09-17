@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* styles/globals.css */
-/* styles/globals.css */
-
+  
 .masonry-grid_column {
   /* You can adjust this value to control the spacing between columns */
   padding: 0 4px;
@@ -42,3 +40,48 @@
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 3s linear infinite;
 }
+
+/* src/styles/globals.css o tu archivo de estilos globales */
+
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes marquee-vertical {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+  
+  .animate-marquee-reverse {
+    animation: marquee-reverse var(--duration) linear infinite;
+  }
+  
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration) linear infinite;
+  }
+  
+
+
+  

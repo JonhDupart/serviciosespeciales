@@ -21,7 +21,7 @@ const Slider = () => {
   });
 
   return (
-    <div className="relative w-full overflow-hidden py-0">
+    <div className="relative w-full overflow-hidden py-0  " >
 
 
       <motion.div
@@ -32,7 +32,7 @@ const Slider = () => {
         className="mySwiper"
       >
         <Swiper
-          spaceBetween={10} // Espacio entre slides
+          spaceBetween={20} // Espacio entre slides
           slidesPerView={4} // Número de slides visibles a la vez
           loop={true} // Hacer el slider infinito
           autoplay={{ delay: 2000 }} // Intervalo de auto-play
@@ -42,19 +42,19 @@ const Slider = () => {
           breakpoints={{
             // Definir el número de slides visibles a diferentes tamaños de pantalla
             320: {
-              slidesPerView: 1.2,
-              spaceBetween: 10,
+              slidesPerView: 1.3,
+              spaceBetween: 30,
             },
             480: {
-              slidesPerView: 2.2,
+              slidesPerView: 2,
               spaceBetween: 10,
             },
             768: {
-              slidesPerView: 3.2,
+              slidesPerView: 3,
               spaceBetween: 10,
             },
             1024: {
-              slidesPerView: 4.2,
+              slidesPerView: 3.1,
               spaceBetween: 10,
             },
           }}
@@ -78,18 +78,18 @@ const Slider = () => {
                       {slide.description}
                     </p>
                     <Button
-                     as="a" 
-                     target='black'
-                     rel='noreferrer'
-                     href="https://api.whatsapp.com/send/?phone=573015360531&text=Hola%2C+me+gustar%C3%ADa+saber+m%C3%A1s+sobre+sus+servicios.&type=phone_number&app_absent=0"
-                      className="text-tiny text-white dark:text-gray-500 bg-success/70"
-                      variant="flat"
-                      color="default"
-                      radius="lg"
-                      size="sm"
-                    >
-                      Contratar
-                    </Button>
+  as="a" 
+  target='_blank'
+  rel='noreferrer'
+  href={`https://api.whatsapp.com/send/?phone=573015360531&text=Hola%2C+me+gustar%C3%ADa+saber+m%C3%A1s+sobre+el+servicio+de ${encodeURIComponent(slide.title)}&type=phone_number&app_absent=0`}
+  className="text-tiny text-white dark:text-gray-500 bg-success/90"
+  variant="flat"
+  color="default"
+  radius="lg"
+  size="sm"
+>
+  Contratar
+</Button>
                   </CardFooter>
                 </Card>
               </div>

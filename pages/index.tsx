@@ -1,21 +1,19 @@
 // Importaciones de módulos externos
 import { Link } from '@nextui-org/link';
 import { Button } from '@nextui-org/react';
-import { button as buttonStyles } from '@nextui-org/theme';
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 // Importaciones de módulos internos
-import { title } from '@/components/primitives';
-import Servicios from '@/components/servicios';
-import Slider from '@/components/slider';
 import DefaultLayout from '@/layouts/default';
 import Galeria from '../components/galeria';
 import Modal from '../components/modal';
 import Pregunta from '../components/preguntas';
-import { siteConfig } from '../config/site';
 import Servicio from '../components/servicios';
-import Ubicacion from '../components/ubicacion';
+import Service from '../components/service';
+import Explore from '@/components/Explore';
+import Slider from '../components/slider';
+import AnimatedBeamDemo from '../components/AnimatedBeamDemo';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -37,16 +35,16 @@ export default function IndexPage() {
           }}
         >
           <div className="flex flex-col justify-end items-center relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-lg cursor-pointer transition-transform-background motion-reduce:transition-none data-[pressed=true]:scale-[0.97] tap-highlight-transparent border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-sm backdrop-saturate-[1] p-8">
-            
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
               transition={{ duration: 0.7 }}
-              className="w-full text-4xl  leading-tight mb-2 mt-4 font-bold gradient-text"
+              className="w-full text-4xl leading-tight mb-2 font-bold gradient-text"
             >
-            Servicios Especiales
-            Para Su Casa 
+              Servicios Especiales
+              <br />
+              Para Su Casa
             </motion.h1>
             <motion.h4
               initial={{ opacity: 0, y: 50 }}
@@ -56,35 +54,38 @@ export default function IndexPage() {
               className="w-full text-base lg:text-lg leading-relaxed"
             >
               <p className="w-full md:w-3/5 mx-auto pb-2">
-              Mantenimiento y reparación de alta calidad para sus espacios.
+                Mantenimiento y reparación de alta calidad para sus espacios.
               </p>
             </motion.h4>
-          
-            
             <div className="flex gap-3 items-center justify-center mt-4">
               <Link
                 isExternal
-                className={`bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-lg shadow-yellow-200/30 hover:shadow-xl transition-shadow duration-300 ease-in-out`}
+                className="bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-lg shadow-yellow-200/30 hover:shadow-xl transition-shadow duration-300 ease-in-out"
                 href="https://api.whatsapp.com/send/?phone=573015360531&text=Hola%2C+me+gustar%C3%ADa+saber+m%C3%A1s+sobre+sus+servicios.&type=phone_number&app_absent=0"
               >
                 Contáctanos
               </Link>
-              <Button color="warning" variant="ghost" className="">
+              <Button color="warning" variant="ghost">
                 Servicios
               </Button>
             </div>
           </div>
-          
           {/* Componente de búsqueda */}
           <div className='w-full items-center'>
             <Modal />
           </div>
         </div>
-        <Ubicacion />
+        <Service />
         <Servicio />
         <Slider />
+        <Explore />
+        {/* Contenedor para Pregunta con fondo */}
+        <div className="mt-10 pt-10 pb-28 sm-pt2 md:pt-20 md:pb-20 lg:pt-20 bg-gradient-to-r from-transparent via-transparent to-transparent rounded-lg shadow-md border border-gray-300 border-opacity-10 bg-white/10 backdrop-blur-lg">
+          <div className="absolute inset-0 border border-yellow-400 border-opacity-10 rounded-lg pointer-events-none"></div>
+          <Pregunta />
+        </div>
         <Galeria />
-        <Pregunta />
+        <AnimatedBeamDemo />
       </section>
     </DefaultLayout>
   );
