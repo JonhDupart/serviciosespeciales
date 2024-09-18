@@ -1,11 +1,12 @@
 // Importaciones de módulos externos
 import { Card } from '@nextui-org/react';
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '../node_modules/swiper/swiper-bundle.min.css'; 
+import 'swiper/swiper-bundle.css'; // Asegúrate de que esta ruta es correcta
+import Image from 'next/image'; // Importa el componente Image
 
 // Importaciones de módulos internos
 const slides = [
@@ -25,7 +26,7 @@ const Slider: React.FC = () => {
     const { ref: sliderRef, inView: sliderInView } = useInView({
         threshold: 0.1,
     });
-    
+
     const { ref: refHeader, inView: headerInView } = useInView({
         threshold: 0.1,
     });
@@ -35,9 +36,9 @@ const Slider: React.FC = () => {
     });
 
     return (
-        <div className="relative w-full overflow-hidden text-center  p-10 m-48 ">
+        <div className="relative w-full overflow-hidden text-center p-10 m-48">
             <motion.h3
-                id='servicios' 
+                id="servicios" 
                 ref={refHeader}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 50 }}
@@ -55,14 +56,14 @@ const Slider: React.FC = () => {
                 transition={{ duration: 0.7 }}
                 className="text-base text-gray-400"
             >
-                "Trabajamos con los mejores para ofrecerte soluciones integrales de calidad."
+                &quot;Trabajamos con los mejores para ofrecerte soluciones integrales de calidad.&quot;
             </motion.span>
             <motion.div
                 ref={sliderRef}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: sliderInView ? 1 : 0, y: sliderInView ? 0 : 50 }}
                 transition={{ duration: 0.5 }}
-                className="mySwiper relative mt-4 "
+                className="mySwiper relative mt-4"
             >
                 <Swiper
                     spaceBetween={10}
@@ -93,9 +94,10 @@ const Slider: React.FC = () => {
                         <SwiperSlide key={slide.id}>
                             <div className="relative opacity-80">
                                 <Card isFooterBlurred radius="sm" className="border-none relative h-full shadow-lg">
-                                    <img 
+                                    <Image 
                                         src={slide.image} 
-                                        className="w-auto h-auto "
+                                        alt={`Logo de ${slide.id}`}  // Proporciona un alt significativo
+                                        layout="responsive" // Mejora la adaptación
                                         width={80} 
                                         height={40} 
                                     />
