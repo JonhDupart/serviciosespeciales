@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 export default function App() {
+  
   // Hooks to track if elements are in view
   const { ref: refHeader, inView: headerInView } = useInView({
     triggerOnce: false,
@@ -22,12 +23,14 @@ export default function App() {
     triggerOnce: false,
     threshold: 0.2,
   });
+  
 
   return (
     <>
-   <div className="flex flex-col items-center justify-center  text-center mt-10 ">
+   <div className="flex flex-col items-center justify-center  text-center mt-32  ">
    
     <motion.h3
+     id='servicios' 
       ref={refHeader}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: headerInView ? 1 : 0, y: headerInView ? 0 : 40 }}
@@ -35,7 +38,8 @@ export default function App() {
       transition={{ duration: 0.7 }}
       className="w-full  gradient-text text-4xl leading-tight mb-2 mt-4 font-semibold"
     >
-Servicios    </motion.h3>
+Servicios 
+   </motion.h3>
     <motion.h4
       ref={refHeader}
       initial={{ opacity: 0, y: 50 }}

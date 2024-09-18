@@ -33,7 +33,7 @@ export const TitleText: React.FC<TitleTextProps> = ({ title, textStyles }) => (
     variants={textVariant2}
     initial="hidden"
     whileInView="show"
-    className={`mt-[8px] font-bold text-[28px] sm:text-[32px] md:text-[38px] lg:text-[44px]  mb-0 ${textStyles || ''}`}
+    className={`mt-[0px] font-bold text-[28px] sm:text-[32px] md:text-[38px] lg:text-[44px]  mb-0 ${textStyles || ''}`}
   >
     {title}
   </motion.h2>

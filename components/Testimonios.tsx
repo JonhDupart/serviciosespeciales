@@ -44,9 +44,9 @@ export default function App() {
       transition={{ duration: 0.8 }}
       className="w-full text-base lg:text-lg leading-relaxed "
     >
-     <p className="w-full md:w-3/5 mx-auto pb-2 mb-4">
+     <p className="w-full md:w-3/5 mx-auto pb-4 mb-4">
      Nuestros clientes son nuestra mejor recomendación. Compartimos algunas experiencias y opiniones de personas que confiaron en
-      <span className="font-bold shadow-md  gradient text "> S E P S C.</span>
+      <span className="font-bold shadow-md  gradient-text "> S E P S C</span>
 </p>
     </motion.h4>
    

@@ -71,7 +71,7 @@ const reviews = [
 
 export function MarqueeDemo() {
   return (
-    <div className="m-60 relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white/5 dark:bg-default-400/10 backdrop-blur-sm backdrop-saturate-[1] md:shadow-xl">
+    <div className="  relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white/5 dark:bg-default-400/10 backdrop-blur-sm backdrop-saturate-[1] md:shadow-xl">
 
       <Testimonios />
       <Marquee pauseOnHover className="[--duration:260s]">

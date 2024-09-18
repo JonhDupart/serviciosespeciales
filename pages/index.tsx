@@ -1,7 +1,6 @@
 // Importaciones de módulos externos
 import { Link } from '@nextui-org/link';
 import { Button } from '@nextui-org/react';
-import { motion } from 'framer-motion';
 import React from 'react';
 
 // Importaciones de módulos internos
@@ -14,11 +13,7 @@ import Service from '../components/service';
 import Explore from '@/components/Explore';
 import Slider from '../components/slider';
 import AnimatedBeamDemo from '../components/AnimatedBeamDemo';
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+import Aliados from '../components/Aliados'
 
 export default function IndexPage() {
   return (
@@ -35,28 +30,16 @@ export default function IndexPage() {
           }}
         >
           <div className="flex flex-col justify-end items-center relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-lg cursor-pointer transition-transform-background motion-reduce:transition-none data-[pressed=true]:scale-[0.97] tap-highlight-transparent border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-sm backdrop-saturate-[1] p-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.7 }}
-              className="w-full text-4xl leading-tight mb-2 font-bold gradient-text"
-            >
+            <h1 className="w-full text-4xl leading-tight mb-2 font-bold gradient-text">
               Servicios Especiales
               <br />
               Para Su Casa
-            </motion.h1>
-            <motion.h4
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.8 }}
-              className="w-full text-base lg:text-lg leading-relaxed"
-            >
+            </h1>
+            <h4 className="w-full text-base lg:text-lg leading-relaxed">
               <p className="w-full md:w-3/5 mx-auto pb-2">
                 Mantenimiento y reparación de alta calidad para sus espacios.
               </p>
-            </motion.h4>
+            </h4>
             <div className="flex gap-3 items-center justify-center mt-4">
               <Link
                 isExternal
@@ -86,6 +69,7 @@ export default function IndexPage() {
         </div>
         <Galeria />
         <AnimatedBeamDemo />
+        <Aliados />
       </section>
     </DefaultLayout>
   );

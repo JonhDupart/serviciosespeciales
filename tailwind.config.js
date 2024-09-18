@@ -14,6 +14,23 @@ module.exports = {
         sans: ['var(--font-sans)'],
         mono: ['var(--font-mono)'],
       },
+      extend: {
+        keyframes: {
+          "shine-pulse": {
+            "0%": {
+              "background-position": "0% 0%",
+            },
+            "50%": {
+              "background-position": "100% 100%",
+            },
+            to: {
+              "background-position": "0% 0%",
+            },
+          },
+        },
+      },
+    
+      
       colors: {
         'custom-yellow': '#fde047', // Define el color con un nombre personalizado
       },

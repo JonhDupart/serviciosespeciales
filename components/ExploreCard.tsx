@@ -24,7 +24,7 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
     variants={fadeIn('right', 'spring', index * 0.7, 0.75)}
     className={`relative  ${
       active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.1] flex-[2]'
-    }  flex items-center justify-center min-w-[60px] h-[450px]  transition-[flex] duration-[0.3s] ease-out cursor-pointer `}
+    }  flex items-center justify-center min-w-[60px] h-[400px]  transition-[flex] duration-[0.3s] ease-out cursor-pointer `}
     onClick={() => handleClick(id)}
   >
     <img

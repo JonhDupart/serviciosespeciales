@@ -61,8 +61,8 @@ const Explore: React.FC = () => {
         className={`${styles.innerWidth} flex flex-col w-full`}
       >
         <TypingText 
-          title="| S E R P C |" 
-          textStyles="text-center text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] " 
+          title="| S E R P C " 
+          textStyles="text-center text-[10px] sm:text-[12px] md:text-[16px] lg:text-[16px] p-0" 
         />
         <TitleText 
           title={<>
