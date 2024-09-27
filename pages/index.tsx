@@ -15,7 +15,6 @@ import Slider from '../components/slider';
 import AnimatedBeamDemo from '../components/AnimatedBeamDemo';
 import Aliados from "@/components/Aliados"; // Ajusta la ruta según sea necesario
 import Contacto from '@/components/Contacto'
-import Dudas from '@/components/Dudas'
 import TextRevealDemo from '@/components/ui/TextRevealDem'; 
 
 
@@ -64,7 +63,6 @@ export default function IndexPage() {
             <Modal />
           </div>
         </div>
-     
         <Service />
         <Servicio />
         <Slider />
@@ -77,7 +75,6 @@ export default function IndexPage() {
         <Galeria />
         <AnimatedBeamDemo />
        <Aliados />
-   
       <Contacto />
       </section>
     </DefaultLayout>
