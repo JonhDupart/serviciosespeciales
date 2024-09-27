@@ -11,7 +11,6 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Masonry from 'react-masonry-css';
-import TextRevealDemo from '@/components/ui/TextRevealDem'; 
 
 // Define los tipos de las imágenes
 interface ImageItem {
@@ -243,9 +242,9 @@ const Galeria: React.FC = () => {
     selectedImageIndex !== null ? items[selectedImageIndex] : null;
 
   return (
-    <div className="w-full flex  flex-wrap content-center justify-center bg-transparent p-0">
+    <div className="w-full flex  flex-wrap content-center justify-center bg-transparent m-36">
       {/* Animated Header */}
-      <TextRevealDemo />
+     
 
       {/* Animated Gallery */}
       <div className="w-full rounded-xl">
