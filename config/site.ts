@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Servicios Especiales Para su Casa',
   description:
-    'Mantenimiento, reparación y construcción para todo tipo de espacios, desde colgar la base del televisor hasta una remodelación completa de tu hogar.',
+    'Mantenimiento, reparación y construcción para todo tipo de espacios, desde colgar la base del televisor hasta la remodelación completa de tu hogar.',
   navItems: [
     {
       label: 'Inicio',

@@ -68,9 +68,10 @@ export const Navbar = () => {
       <NavbarContent className="shouldHideOnScroll flex justify-between items-center">
         {/* Logo on the left */}
         <NavbarBrand className="flex gap-3">
-          <NextLink className="flex items-center gap-1" href="/">
+          <NextLink className="flex items-center gap-4" href="/">
             <Logo />
-            <p className="font-bold text-inherit">S E P S C</p>
+            {/* Aquí se oculta el texto en pantallas pequeñas */}
+            <p className="font-bold text-inherit hidden md:block">S E P S C</p>
           </NextLink>
         </NavbarBrand>
 
@@ -121,9 +122,7 @@ export const Navbar = () => {
                             ? 'success'
                             : 'foreground'
                       }
-                      href={item.href} // Aquí es donde se utiliza el href del navMenuItems
-
-                     
+                      href={item.href}
                       size="lg"
                     >
                       {item.label}
@@ -136,7 +135,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile view */}
-        <div className="flex items-center  md:hidden">
+        <div className="flex items-center md:hidden">
           <ThemeSwitch />
           <div className="relative">
             {/* A wrapper to increase click area */}

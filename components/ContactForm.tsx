@@ -3,6 +3,8 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { Button, Input, Textarea } from '@nextui-org/react';
 import { RainbowButton } from "@/components/magicui/rainbow-button";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -10,6 +12,12 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
+
+  // Hook to track if the component is in view
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
 
   // Function to validate form fields
   const validateForm = (): boolean => {
@@ -50,34 +58,38 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '', // ID del servicio
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '', // ID de la plantilla
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
         {
           from_name: name,
           from_email: email,
           message,
-          to_name: 'Servicios Especiales Para Su Casa', // Nombre del destinatario
+          to_name: 'Servicios Especiales Para Su Casa',
         },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID || '' // ID del usuario
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID || ''
       );
 
-      // Mostrar mensaje de éxito
       setStatus('El correo fue enviado con éxito');
-      // Limpiar los campos
       setName('');
       setEmail('');
       setMessage('');
       setErrors({});
     } catch (error) {
-      // Manejar errores de envío
       setStatus('Error al enviar el correo. Intenta de nuevo más tarde.');
     }
   };
 
   return (
-    <div className="max-w-lg mx-auto  items-center justify-center">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.7 }}
+      className="max-w-lg"
+    >
       <form onSubmit={handleSubmit}>
-        <h2 className=' text-xl p-5 font-semibold uppercase text-start'>Formulario</h2>
+        <h2 className='text-xl p-5 font-semibold uppercase text-start'>Formulario</h2>
         <div>
           <Input
             id="name"
@@ -126,7 +138,7 @@ const ContactForm = () => {
 
         {status && <p className="mt-4 text-yellow-500">{status}</p>}
       </form>
-    </div>
+    </motion.div>
   );
 };
 

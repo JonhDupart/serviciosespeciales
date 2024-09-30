@@ -88,7 +88,7 @@ const Explore: React.FC = () => {
         </motion.h4>
 
         {/* Contenedor de las tarjetas de exploración */}
-        <div className="mt-[20px] sm:mt-[20px] md:mt-[30px] lg:mt-[40px] flex lg:flex-row flex-col min-h-[35vh] gap-2">
+        <div className="mt-[20px] sm:mt-[20px] md:mt-[30px] lg:mt-[40px] flex lg:flex-row flex-col min-h-[80vh] gap-2">
           {exploreWorlds.map((world: ExploreWorld, index: number) => (
             <ExploreCard
               key={world.id}

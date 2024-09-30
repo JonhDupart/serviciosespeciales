@@ -77,9 +77,9 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full flex flex-col lg:flex-row items-start lg:space-x-4 px-4 lg:px-6">
+    <div className="w-full flex flex-col lg:flex-row items-start lg:space-x-4 px-4 lg:px-6 justify-center">
       {/* Left Container: Title and Description */}
-      <div className="w-full lg:w-2/5 flex flex-col items-center lg:sticky lg:top-10 lg:z-10 lg:py-4  space-y-4">
+      <div className="w-full lg:w-[35%] flex flex-col items-center justify-center lg:sticky lg:top-10 lg:z-10 lg:py-4  space-y-4">
         <motion.h2
           ref={headerRef}
           initial={{ opacity: 0, y: 30 }}

@@ -16,6 +16,9 @@ import AnimatedBeamDemo from '../components/AnimatedBeamDemo';
 import Aliados from "@/components/Aliados"; // Ajusta la ruta según sea necesario
 import Contacto from '@/components/Contacto'
 import TextRevealDemo from '@/components/ui/TextRevealDem'; 
+import TextContacto from '@/components/TextCoontacto';
+import Numeros from '@/components/numeros'
+
 
 
 export default function IndexPage() {
@@ -24,7 +27,6 @@ export default function IndexPage() {
       <section className="relative flex flex-col items-center justify-center mt-8 gap-0 py-0 md:py-0 bg-transparent p-2 rounded-lg ">
 
         <div className="absolute inset-0 overflow-hidden">
-        <div className="bg-gray-300 rounded-full opacity-20 blur-3xl w-64 h-64 absolute top-1/1 left-80 transform -translate-x-1/2 -translate-y-1/2"></div>
         <div 
   className="rounded-full opacity-10 blur-3xl w-[800px] h-[800px] absolute top-[4700px] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
   style={{
@@ -33,7 +35,13 @@ export default function IndexPage() {
 ></div>
 
         </div>
-        <div className="relative z-10 w-full max-w-screen-xl mx-auto text-center flex flex-col items-center justify-center mt-12 md:p-2">
+        <div className="relative z-10 w-full max-w-screen-xl mx-auto text-center flex flex-col items-center justify-center mt-12 md:p-2"
+        style={{
+          backgroundImage: 'url("/malla.svg")', // Asegúrate de que esta ruta sea correcta
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}>
           <div className="flex flex-col justify-end items-center relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-lg cursor-pointer transition-transform-background motion-reduce:transition-none data-[pressed=true]:scale-[0.97] tap-highlight-transparent border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-sm backdrop-saturate-[1] p-8">
             <h1 className="w-full text-4xl leading-tight mb-2 font-bold gradient-text">
               Servicios Especiales
@@ -75,7 +83,10 @@ export default function IndexPage() {
         <Galeria />
         <AnimatedBeamDemo />
        <Aliados />
+       <Numeros/>
+       <TextContacto/>
       <Contacto />
+     
       </section>
     </DefaultLayout>
   );

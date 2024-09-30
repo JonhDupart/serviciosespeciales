@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Asegúrate de que esta ruta es correcta
 import Image from 'next/image'; // Importa el componente Image
 import Globe from "@/components/ui/globe"; // Asegúrate de que esta ruta es correcta
+import Numeros from '@/components/numeros'
+
 
 // Importaciones de módulos internos
 const slides = [
@@ -41,7 +43,7 @@ const Slider: React.FC = () => {
     });
 
     return (
-        <div className="relative w-full overflow-hidden text-center mt-36 md:mt30 lg:mt-30 xl:mt-32 flex flex-col">
+        <div className="relative w-full overflow-hidden text-center mt-36 mb-20 md:mt30 lg:mt-30 xl:mt-32 flex flex-col">
             <motion.span
                 ref={refHeader}
                 initial={{ opacity: 0, y: 50 }}
@@ -88,7 +90,7 @@ const Slider: React.FC = () => {
                             spaceBetween: 2,
                         },
                         640: {
-                            slidesPerView: 2,
+                            slidesPerView: 4,
                             spaceBetween: 8,
                         },
                         1024: {
@@ -115,7 +117,7 @@ const Slider: React.FC = () => {
                 </Swiper>
                 {/* Degradados en los bordes */}
             </motion.div>
-            
+           
         </div>
     );
 };
