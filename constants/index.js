@@ -45,11 +45,6 @@ export const exploreWorlds = [
         title: 'Gachanzipa',
       },
       {
-        id: 'world-10',
-        imgUrl: '/tenjo.jpg',
-        title: 'tenjo',
-      },
-      {
         id: 'world-11',
         imgUrl: '/tocanzipa.jpg',
         title: 'Tocanzipa',

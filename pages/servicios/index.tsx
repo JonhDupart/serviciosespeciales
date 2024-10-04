@@ -1,15 +1,15 @@
 import { title } from '@/components/primitives';
-import TapContacto from '@/components/TapContacto'
-
+import Mainservicios from '@/components/Mainservicios';
 import DefaultLayout from '@/layouts/default';
+import Categorias from '@/components/Categorias'
 
 export default function DocsPage() {
   return (
     <DefaultLayout>
-      <section className=" w-full flex flex-col items-center justify-center gap-4 py-8 mt-24 md:py-10">
-        <div className="w-full inline-block max-w-lg text-center justify-center">
-          <h1 className={title()}>Servicios</h1>
-       
+      <section className="w-full flex flex-col items-center justify-center mt-24 md:py-10">
+        <div className="w-full flex flex-col">
+          <Mainservicios />
+         <Categorias />
         </div>
       </section>
     </DefaultLayout>

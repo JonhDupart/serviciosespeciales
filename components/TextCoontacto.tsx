@@ -11,7 +11,7 @@ const TextContacto: React.FC = () => {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full items-center justify-center ">
       <motion.h3
         id="servicios"
         ref={ref}
@@ -19,7 +19,7 @@ const TextContacto: React.FC = () => {
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.7 }}
-        className="w-full items-start justify-start pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-5xl md:text-5xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"
+        className="text-center w-full items-start mb-10 lg:mb-20 justify-start pointer-events-none whitespace-pre-wrap gradient-text  text-4xl md:text-4xl lg:text-4xl font-semibold leading-none "
       >
         Contáctanos
       </motion.h3>

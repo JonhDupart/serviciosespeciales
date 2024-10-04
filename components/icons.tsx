@@ -27,8 +27,13 @@ export const Logo: React.FC<Omit<IconSvgProps, 'onCopy' | 'height' | 'width'>> =
   size = 86,
   ...props
 }) => {
-  const { theme } = useTheme(); 
-  const logoSrc = theme === 'dark' ? logoImage : logo;
+  const { theme } = useTheme();
+  const [logoSrc, setLogoSrc] = React.useState(logo); // Valor predeterminado
+
+  React.useEffect(() => {
+    // Actualiza el logo según el tema
+    setLogoSrc(theme === 'dark' ? logoImage : logo);
+  }, [theme]); // Se ejecuta cuando el tema cambia
 
   return (
     <Image

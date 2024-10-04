@@ -52,7 +52,7 @@ const ContactForm = () => {
       if (!name) missingFields.push('nombre');
       if (!email) missingFields.push('correo electrónico');
       if (!message) missingFields.push('mensaje');
-      setStatus(`Faltan llenar los siguientes campos: ${missingFields.join(', ')}.`);
+      setStatus(`Completa los campos requeridos ${missingFields.join(', ')}.`);
       return;
     }
 
@@ -88,7 +88,7 @@ const ContactForm = () => {
       transition={{ duration: 0.7 }}
       className="max-w-lg"
     >
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id='formulario'>
         <h2 className='text-xl p-5 font-semibold uppercase text-start'>Formulario</h2>
         <div>
           <Input

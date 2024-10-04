@@ -50,7 +50,7 @@ const App: React.FC = () => {
   <div className="flex-grow"> {/* Permite que este div ocupe espacio */}
     <h2 className="text-lg font-semibold mb-2 ">Contáctanos por WhatsApp</h2>
     <p>
-    Contáctanos por WhatsApp para recibir atención rápida y personalizada.
+    para recibir atención rápida y personalizada.
      Resolvemos tus dudas, coordinamos servicios y brindamos asesoría en tiempo real.</p>
     <a
       href="https://api.whatsapp.com/send/?phone=573015360531&text=Hola%2C+me+gustar%C3%ADa+saber+m%C3%A1s+sobre+sus+servicios.&type=phone_number&app_absent=0" // Cambia "tuNumero" por tu número de WhatsApp
@@ -63,7 +63,7 @@ const App: React.FC = () => {
   <svg
   aria-hidden="true"
   fill="transparent" // Establece el fondo como transparente
-  className="fill-yellow-500" // Cambia el color al hacer hover
+  className="fill-warning" // Cambia el color al hacer hover
   focusable="false"
   height="25"
   role="presentation"
@@ -111,7 +111,6 @@ const App: React.FC = () => {
   <div className="flex-grow"> {/* Permite que este div ocupe espacio */}
     <h2 className="text-lg font-semibold mb-2">Contáctanos por Email</h2>
     <p>
-    Envíanos tus consultas o solicitudes por correo electrónico,
      y te responderemos con la información que necesitas, ya sea sobre cotizaciones, dudas o servicios.</p>
     <a
       href="mailto:ejemplo@dominio.com" // Cambia "tuNumero" por tu número de WhatsApp
@@ -124,7 +123,7 @@ const App: React.FC = () => {
   <svg
   aria-hidden="true"
   fill="transparent" // Establece el fondo como transparente
-  className="fill-yellow-500" // Cambia el color al hacer hover
+  className="fill-warning" // Cambia el color al hacer hover
   focusable="false"
   height="25"
   role="presentation"
@@ -173,7 +172,7 @@ const App: React.FC = () => {
     <p>
     Completa nuestro formulario web y nos pondremos en contacto contigo lo antes posible.    </p>
     <a
-      href="https://wa.me/tuNumero" // Cambia "tuNumero" por tu número de WhatsApp
+      href="#formulario" // Cambia "tuNumero" por tu número de WhatsApp
       className="flex items-center mt-4 text-warning hover:underline text-base"
     >
       Completa el formulario <span className="ml-1">&#8594;</span> {/* Flecha hacia la derecha */}
@@ -183,7 +182,7 @@ const App: React.FC = () => {
   <svg
   aria-hidden="true"
   fill="transparent" // Establece el fondo como transparente
-  className="fill-yellow-500 " // Cambia el color al hacer hover
+  className="fill-warning " // Cambia el color al hacer hover
   focusable="false"
   height="25"
   role="presentation"

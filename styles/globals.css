@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
   /* En styles/globals.css */
-
-
-  
+/* styles/globals.css */
+body {
+  font-family: var(--font-poppins), sans-serif; /* Usando la variable CSS */
+}
 .masonry-grid_column {
   /* You can adjust this value to control the spacing between columns */
   padding: 0 4px;
 }
-
 .masonry-grid_column > div {
   /* You can adjust this value to control the spacing between items */
   margin-bottom: 16px;
@@ -35,17 +35,9 @@
   --color-4: 195 100% 63%;
   --color-5: 90 100% 63%;
 }
-
-/* styles/globals.css o tu archivo CSS */
-
-
 .override-inline-flex {
   display: block !important; /* O cualquier otro estilo que necesites */
 }
-
-
-/* src/styles/globals.css o tu archivo de estilos globales */
-
 @keyframes marquee {
     0% {
       transform: translateX(100%);
@@ -86,5 +78,34 @@
   }
   
 
-
+  .custom-input{
+  
+    color: #fab01c; /* Cambia este color si lo deseas */
+  
+  }
+  .progress-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .txt_pasos {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .progress {
+    background-color: #e0e0e0; /* Color de fondo de la barra */
+    border-radius: 4px; /* Bordes redondeados */
+    height: 10px; /* Altura de la barra */
+    width: 100%; /* Ancho completo */
+  }
+  
+  .pb_wizard {
+    background-color: #f6b83b; /* Color de la barra de progreso */
+    height: 100%; /* Para llenar la barra */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: width 0.4s; /* Transición suave al cambiar de ancho */
+  }
+  
+  
   

@@ -13,10 +13,7 @@ export const siteConfig = {
       label: 'Servicios',
       href: '/servicios',
     },
-    {
-      label: 'Precio',
-      href: '/precios',
-    },
+   
     {
       label: 'Nosotros',
       href: '/nosotros', // Corregido 'nosotro' a 'nosotros'

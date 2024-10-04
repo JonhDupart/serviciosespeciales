@@ -1,7 +1,10 @@
 import { Input } from '@nextui-org/input';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
+import { divider } from '@nextui-org/theme';
 import React, { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa'; // Asegúrate de tener react-icons instalado
+
 
 interface Servicio {
   id: number;
@@ -147,22 +150,31 @@ const ServiciosSearch: React.FC = () => {
   };
 
   return (
-    <div className="w-full md:w-1/2 flex flex-col items-center justify-center mt-2 mb-10">
-      <Input
-        aria-label="Buscar servicios"
-        placeholder="Busca tu servicio..."
-        startContent={<Kbd keys={['command']}>S</Kbd>}
-        onChange={handleSearchChange}
-        className="mb-4 w-full max-w-4xl" // Ajusta el ancho aquí
-        size="lg" // Aumenta el tamaño del Input
-      />
+    <div className="w-full md:w-1/2 lg:w-full flex flex-col items-center justify-center mt-2 mb-10">
+   <div className="relative w-full max-w-4xl mb-4  ">
+   <Input
+      label="S E P S C"
+      aria-label="Buscar servicios"
+      placeholder="Buscar servicios"
+      onChange={handleSearchChange}
+      className="bg-transparent border-0 focus:ring-0 focus:outline-none custom-input" // Agrega la clase custom-placeholder
+      size="lg"
+      endContent={
+        <div className='bg-warning rounded-full w-11 h-9 lg:w-11 lg:h-10 mt-2 flex items-center justify-center'>
+          <FaSearch className="text-white dark:text-white/90 w-5 h-5" />
+        </div>
+      }
+    />
+
+</div>
+
       {filteredServicios.length > 0 ? (
-       <ul className="list-disc">
+       <ul className="list-disc text-warning/50">
        {filteredServicios.map((servicio) => (
          <li key={servicio.id} className="mb-2">
            <Link
              href={getWhatsappUrl(servicio.name)}
-             className="text-base hover:underline font-semibold"
+             className="text-base text-warning hover:underline font-semibold"
              target="_blank"
              rel="noopener noreferrer" 
            >
