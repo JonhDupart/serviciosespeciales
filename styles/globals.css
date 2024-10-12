@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-poppins), sans-serif; /* Usando la variable CSS */
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --font-poppins: 'Poppins', sans-serif;
 }
+
+body {
+  font-family: var(--font-sans);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
 .masonry-grid_column {
   /* You can adjust this value to control the spacing between columns */
   padding: 0 4px;
