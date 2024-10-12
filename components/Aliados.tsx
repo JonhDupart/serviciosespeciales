@@ -105,8 +105,7 @@ const Slider: React.FC = () => {
                                 <Card isFooterBlurred radius="sm" className="border-none relative h-full shadow-lg">
                                     <Image 
                                         src={slide.image} 
-                                        alt={`Logo de ${slide.id}`}  // Proporciona un alt significativo
-                                        layout="responsive" // Mejora la adaptación
+                                        alt={`Logo de ${slide.id}`}  // Proporciona un alt significativ 
                                         width={80} 
                                         height={40} 
                                     />

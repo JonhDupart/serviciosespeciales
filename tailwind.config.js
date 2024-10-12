@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)'],
-        mono: ['var(--font-mono)'],
+        sans: ['var(--font-sans)', 'Poppins', 'sans-serif'], // Agregando Poppins
+        mono: ['var(--font-mono)', 'monospace'],
       },
       animation: {
         meteor: "meteor 5s linear infinite",

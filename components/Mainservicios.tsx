@@ -7,7 +7,7 @@ import { AnimatedListDemo } from './AnimatedListDemo';
 
 const TwoColumnLayout: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full min-h-screen mt-10 lg:mt-20"
+    <div className="flex flex-col md:flex-row w-full   mt-10 lg:mt-20"
       style={{
         backgroundImage: 'url("/malla1.svg")', // Asegúrate de que esta ruta sea correcta
         backgroundSize: 'contain',
@@ -15,7 +15,7 @@ const TwoColumnLayout: React.FC = () => {
         backgroundRepeat: 'no-repeat',
       }}>
       {/* Columna Izquierda */}
-      <div className="md:w-1/2 p-2 flex flex-col lg:sticky lg:top-32 lg:h-[80vh]">
+      <div className="md:w-1/2 p-2 flex flex-col lg:sticky lg:top-32  lg:h-[80vh]">
         <p className="text-lg mb-4 flex items-center justify-center lg:justify-start font-semibold text-warning text-center lg:text-left">
           <FaAward className="mr-2 text-warning" /> {/* Añade color o tamaño si lo deseas */}
           Calidad Certificada

@@ -4,21 +4,21 @@ import Image from "next/image";
 
 const PromoBanner = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between p-8 bg-white/0.5 rounded-lg shadow-lg w-full mt-5 mb-20">
-      <div className="md:w-2/5 text-center md:text-left p-2">
+    <section className="flex flex-col md:flex-row items-center justify-between p-8 bg-white/0.5 rounded-lg shadow-lg w-full mt-20 mb-28">
+      <div className="md:w-2/5 text-center md:text-left p-2 ">
         <h1 className="text-2xl font-bold lg:text-5xl">
           Como Funciona<br /> 
           <span className="text-warning text-2xl lg:text-4xl"> S E P S C</span>
         </h1>
-        <p className="mt-2 text-base">
+        <p className=" text-base text-justify">
           Haz clic en el botón Agenda Visita, selecciona tu ubicación, el servicio deseado, elige el día y la hora, y listo. ¡Espera a tu profesional designado en tu domicilio.
         </p>
-        <div className="mt-4 flex gap-4">
+        <div className="mt-4 flex gap-4 w-full justify-center lg:justify-start">
           <Modalreserva />
         </div>
       </div>
 
-      <div className="md:w-3/5 relative">
+      <div className="md:w-3/5 relative mt-16">
         <HeroVideoDialog
           className="dark:hidden block"
           animationStyle="from-center"

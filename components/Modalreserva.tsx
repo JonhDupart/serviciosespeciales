@@ -116,8 +116,8 @@ export default function App() {
   return (
     <>
       <Button onPress={onOpen} color="warning" endContent={<MdOutlineCalendarMonth />}>Agendar servicio</Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent>
+      <Modal  className='w-full h-auto mb-52' isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent >
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">

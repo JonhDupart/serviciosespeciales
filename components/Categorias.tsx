@@ -78,7 +78,7 @@ const WorkflowSelection: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-start justify-center mb-10 mt-10 lg:mt-0">
+    <div className="min-h-screen w-full flex items-start justify-center mb-10 lg:mt-0">
       <div className="max-w-6xl w-full rounded-lg overflow-hidden">
         <div className="w-full mb-5">
           <h1 className="text-xl">Busca por Categoria</h1>

@@ -106,7 +106,7 @@ const WorkflowSelection: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full flex items-start justify-center">
+    <div className="mb-20 lg:mb-44 w-full flex items-start justify-center">
       <div className="max-w-6xl w-full  rounded-lg  overflow-hidden">
   
 

@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  /* En styles/globals.css */
-/* styles/globals.css */
+
 body {
   font-family: var(--font-poppins), sans-serif; /* Usando la variable CSS */
 }
