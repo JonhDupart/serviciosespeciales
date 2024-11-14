@@ -101,7 +101,7 @@ export default function App() {
           <p className="md:w-3/4">
             Aquí encontrarás respuestas a las dudas más comunes que recibimos. Si no encuentras lo que buscas,
             <span>
-              <a href="https://wa.me/1234567890" className="text-success hover:underline font-bold gradient-text" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/573204749676" className="text-success hover:underline font-bold gradient-text" target="_blank" rel="noopener noreferrer">
                 no dudes en contactarnos.
               </a>
             </span>

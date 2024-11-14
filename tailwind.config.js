@@ -6,13 +6,13 @@ module.exports = {
     './layouts/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}', // Incluido solo si realmente usas componentes de NextUI
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'Poppins', 'sans-serif'], // Agregando Poppins
-        mono: ['var(--font-mono)', 'monospace'],
+        sans: ['Poppins', 'var(--font-sans)', 'sans-serif'], // Asegúrate de que la variable esté definida correctamente
+        mono: ['monospace', 'var(--font-mono)'],
       },
       animation: {
         meteor: "meteor 5s linear infinite",
@@ -33,7 +33,7 @@ module.exports = {
         },
       },
       colors: {
-        'custom-yellow': '#fde047', // Define el color con un nombre personalizado
+        'custom-yellow': '#eab308', // Asegúrate de tener un solo color `custom-yellow`
         "color-1": "hsl(var(--color-1))",
         "color-2": "hsl(var(--color-2))",
         "color-3": "hsl(var(--color-3))",
@@ -43,8 +43,8 @@ module.exports = {
         'custom-green-light': '#44A08D',
         'custom-blue-dark': '#3355ff',
         'custom-blue-light': '#283E51',
-        'custom-yellow':  '#eab308',
-        'custom-yello':'#78350f',
+        'custom-yellow': '#eab308', // Elimina el color duplicado
+        'custom-yello': '#78350f',
       },
     },
   },

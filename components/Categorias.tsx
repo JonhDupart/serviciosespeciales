@@ -6,17 +6,35 @@ import { Link, Button } from "@nextui-org/react";
 
 
 const serviceOptions = {
-  construction: [
-    { key: 'painting', label: 'Pintura' },
-    { key: 'plumbing', label: 'Fontanería' },
+  Electricidad: [
+    { key: 'Mantenimiento puertas eléctricas', label: 'Mantenimiento puertas eléctricas' },
+    { key: 'Cambio de bombillas', label: 'Cambio de bombillas' },
+    { key: 'Iluminación ', label: 'Iluminación ' },
+    { key: 'Ahorro de energía', label: 'Ahorro de energía' },
+    { key: 'Cambio de tomas', label: 'Cambio de tomas' },
+   
+    
+    
   ],
-  electrical: [
-    { key: 'wiring', label: 'Cableado' },
-    { key: 'lighting', label: 'Iluminación' },
+  EstructuraMetalica: [
+    { key: 'Estructura para edificios', label: 'Estructura para edificios' },
+    { key: 'Cubierta de techos', label: 'Cubierta de techos' },
+    { key: 'Construcción y diseño de todo tipo de puentes', label: 'Construcción y diseño de todo tipo de puentes' },
+    { key: 'Diseño de escaleras', label: 'Diseño de escaleras' },
+    { key: 'Encierro en todo tipo de mallas', label: 'Encierro en todo tipo de mallas' },
+    { key: 'Mantenimiento de cableado', label: 'Mantenimiento de cableado' },
+    { key: 'Rejas', label: 'Rejas' },
+    { key: 'Ventanas', label: 'Ventanas' },
+    { key: 'Puertas', label: 'Puertas' },
+    { key: 'Ornamentación en general', label: 'Ornamentación en general' },
   ],
-  cleaning: [
-    { key: 'house_cleaning', label: 'Limpieza de Casa' },
-    { key: 'office_cleaning', label: 'Limpieza de Oficina' },
+  Acabados: [
+    { key: 'Acabados de apartamentos', label: 'Acabados de apartamentos' },
+    { key: 'Acabados arquitectónicos', label: 'Acabados arquitectónicos' },
+    { key: 'PVC', label: 'PVC' },
+    { key: 'Acabados de construcción', label: 'Acabados de construcción' },
+    { key: 'Acabados en madera', label: 'Acabados en madera' },
+   
   ],
   gardening: [
     { key: 'landscaping', label: 'Paisajismo' },
@@ -34,21 +52,21 @@ interface WorkflowOption {
 const workflowOptions: WorkflowOption[] = [
   {
     icon: <MdOutlineEngineering />,
-    title: "Terminados y Acabados",
-    description: "Acabados y terminados de alta calidad para tus proyectos de construcción o remodelación. Nos encargamos de cada detalle, asegurando un resultado impecable en paredes, pisos, techos y más.",
-    serviceGroup: 'construction'
+    title: "Electricidad doméstica",
+    description: "Soluciones eléctricas para su hogar u oficina. Desde el mantenimiento de puertas eléctricas hasta la instalación de duchas.",
+    serviceGroup: 'Electricidad'
   },
   {
     icon: <FaThumbsUp />,
-    title: "Remodelación",
-    description: "Servicios de remodelación de viviendas y oficinas, transformamos tus espacios con diseños funcionales y modernos. Nos especializamos en reformas integrales, ampliaciones y mejoras estéticas, adaptándonos a tus necesidades y gustos.",
-    serviceGroup: 'electrical'
+    title: "Construcción en  estructura metálica",
+    description: "Nuestros servicios incluyen el diseño y construcción estructuras robustas y duraderas para todo tipo de espacio",
+    serviceGroup: 'EstructuraMetalica'
   },
   {
     icon: <FaUserPlus />,
-    title: "Limpieza",
-    description: "Servicios de limpieza profesional para hogares y empresas, garantizamos espacios impecables y saludables. Especializados en limpieza profunda, mantenimiento regular y desinfección, asegurando un entorno limpio y seguro.",
-    serviceGroup: 'cleaning'
+    title: "Acabados",
+    description: "Nos especializamos en acabados de apartamentos, acabados arquitectónicos, PVC y acabados en madera, brindando un toque final perfecto a su construcción.",
+    serviceGroup: 'Acabados'
   },
   {
     icon: <FaClipboardCheck />,
@@ -72,7 +90,7 @@ const WorkflowSelection: React.FC = () => {
     const selectedService = selectedServices[group];
     if (selectedService) {
       const message = `Hola, estoy interesado en el servicio de ${title} y me gustaría solicitar ${selectedService}.`;
-      const url = `https://api.whatsapp.com/send/?phone=573015360531&text=${encodeURIComponent(message)}`;
+      const url = `https://api.whatsapp.com/send/?phone=573204749676 &text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     }
   };
@@ -105,7 +123,7 @@ const WorkflowSelection: React.FC = () => {
                   <Select
                     label={`${workflow.title}`}
                     placeholder="Selecciona un servicio"
-                    description={`Contácta un profesinal.`}
+                    description={`Contácta un profesional.`}
                     onSelectionChange={(selection) => {
                       const service = selection?.currentKey || null; // Obtener el servicio seleccionado
                       handleServiceSelect(workflow.serviceGroup, service);
@@ -126,7 +144,7 @@ const WorkflowSelection: React.FC = () => {
                     className="mt-2 w-full bg-warning text-white py-2 rounded"
                     onClick={() => handleSendMessage(workflow.title, workflow.serviceGroup)}
                        >
-                    Enviar mensaje
+                    Contratar servicio
                   </Button>
                 </PopoverContent>
               </Popover>

@@ -42,7 +42,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    whatsapp: 'https://wa.me/573015360531', // Corregido el número de teléfono
+    whatsapp: 'https://wa.me/573204749676', // Corregido el número de teléfono
     facebook: 'https://facebook.com/yourpage',
     instagram: 'https://instagram.com/yourprofile',
   },

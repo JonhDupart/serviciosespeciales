@@ -16,20 +16,21 @@ const serviciosData: Servicio[] = [
   {
     id: 1,
     name: 'Electricidad',
-    description: ' Contacta un profesional',
+    description: 'Contacta un profesional',
   },
   {
     id: 2,
     name: 'Pintura',
-    description: ' Contacta un profesional',
+    description: 'Contacta un profesional',
   },
   {
     id: 3,
     name: 'Fontanería',
     description: 'Contacta un profesional',
-  },  {
+  },
+  {
     id: 4,
-    name: 'Ingenieria civil',
+    name: 'Ingeniería civil',
     description: 'Contacta un profesional',
   },
   {
@@ -41,7 +42,8 @@ const serviciosData: Servicio[] = [
     id: 6,
     name: 'Diseño de Interiores',
     description: 'Contacta un profesional',
-  },  {
+  },
+  {
     id: 7,
     name: 'Terminados y Acabados',
     description: 'Contacta un profesional',
@@ -55,7 +57,8 @@ const serviciosData: Servicio[] = [
     id: 9,
     name: 'Limpieza de Muebles a Vapor',
     description: 'Contacta un profesional',
-  },  {
+  },
+  {
     id: 10,
     name: 'Iluminación',
     description: 'Contacta un profesional',
@@ -67,16 +70,17 @@ const serviciosData: Servicio[] = [
   },
   {
     id: 12,
-    name: 'Instalación de Camaras',
+    name: 'Instalación de Cámaras',
     description: 'Contacta un profesional',
-  },  {
+  },
+  {
     id: 13,
-    name: 'Jardineria',
+    name: 'Jardinería',
     description: 'Contacta un profesional',
   },
   {
     id: 14,
-    name: 'Ebanisteria',
+    name: 'Ebanistería',
     description: 'Contacta un profesional',
   },
   {
@@ -86,16 +90,17 @@ const serviciosData: Servicio[] = [
   },
   {
     id: 16,
-    name: 'Ferreteria',
+    name: 'Ferretería',
     description: 'Contacta un profesional',
-  },  {
+  },
+  {
     id: 17,
     name: 'Cerraduras',
     description: 'Contacta un profesional',
   },
   {
     id: 18,
-    name: 'Plomeria',
+    name: 'Plomería',
     description: 'Contacta un profesional',
   },
   {
@@ -112,9 +117,96 @@ const serviciosData: Servicio[] = [
     id: 21,
     name: 'Mudanzas',
     description: 'Contacta un profesional',
-  },  {
+  },
+  {
     id: 22,
     name: 'Instalación de Gas',
+    description: 'Contacta un profesional',
+  },
+  // Nuevos servicios añadidos
+  {
+    id: 23,
+    name: 'Mantenimiento puertas eléctricas',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 24,
+    name: 'Instalación duchas de baños',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 25,
+    name: 'Cambio de bombillas',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 26,
+    name: 'Ahorro de energía',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 27,
+    name: 'Cambio de tomas',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 28,
+    name: 'Mantenimiento cableado',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 29,
+    name: 'Construcción y diseño de todo tipo de puentes',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 30,
+    name: 'Estructura para edificios',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 31,
+    name: 'Cubierta de techos',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 32,
+    name: 'Diseño de escaleras',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 33,
+    name: 'Encierro en todo tipo de mallas',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 34,
+    name: 'Rejas, ventanas, puertas, ornamentación en general',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 35,
+    name: 'Acabados de apartamentos',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 36,
+    name: 'Acabados arquitectónicos',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 37,
+    name: 'PVC',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 38,
+    name: 'Acabados de construcción',
+    description: 'Contacta un profesional',
+  },
+  {
+    id: 39,
+    name: 'Acabados en madera',
     description: 'Contacta un profesional',
   },
   
@@ -146,7 +238,7 @@ const ServiciosSearch: React.FC = () => {
 
   const getWhatsappUrl = (name: string) => {
     const message = `Hola, me gustaría saber más sobre el servicio de ${name}.`;
-    return `https://api.whatsapp.com/send/?phone=573015360531&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+    return `https://api.whatsapp.com/send/?phone=573204749676 &text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
   };
 
   return (

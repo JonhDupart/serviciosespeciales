@@ -4,6 +4,7 @@ import NumberTicker from "@/components/ui/number-ticker";
 import { FaCity, FaPaintRoller, FaChartLine } from "react-icons/fa"; // Importa los íconos
 import { motion } from "framer-motion"; // Importa framer-motion
 import { useInView } from 'react-intersection-observer';
+import Globe from "@/components/ui/globe"; // Asegúrate de que esta ruta es correcta
 
 const ThreeDivs: React.FC = () => {
   const [ref, inView] = useInView({
@@ -13,6 +14,7 @@ const ThreeDivs: React.FC = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-around w-full gap-4 mb-40" ref={ref}>
+     
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
